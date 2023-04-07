@@ -20,6 +20,8 @@ function reducer(state={amount:1},action){
 
 // gobal state => check current value of state
 console.log(store.getState());
+
+// subscribe method runs after every state change or reducer change or after dispatch
 store.subscribe(()=>console.log(store.getState()))
 
 
