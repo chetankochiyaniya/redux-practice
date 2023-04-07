@@ -1,13 +1,19 @@
 import { createStore ,applyMiddleware} from 'redux'
 import logger from 'redux-logger'
 
+//action name const 
+const inc = 'increment'
+const dec = 'decrement'
+const incByAmount = 'incrementByAmount'
+
 //logger is just use for log that give prev state, action and next state
 // store
 const store = createStore(reducer,applyMiddleware(logger.default))
+let history=[]
 
 //reducer funation
 function reducer(state={amount:0},action){
-    if(action.type==='increment'){
+    if(action.type===inc){
     
         // if you write like : 
         // state.amount = state.amount + 1;  
@@ -17,17 +23,15 @@ function reducer(state={amount:0},action){
         // it will create copy of object , in here it like : [{amout:2}], next: [{amout:2},{amout:3}] it will not chage previous value it generate copy and than store
         return {amount: state.amount + 1}
     }
-    if(action.type==='decrement'){
+    if(action.type===dec){
         return {amount: state.amount - 1}
     }
     
-    if (action.type === 'incrementByAmount'){
+    if (action.type === incByAmount){
         return {amount: state.amount + action.payload}
     }
     return state
 }
-
-let history=[]
 
 // subscribe method runs after every state change or reducer change or after dispatch
 // store.subscribe(()=>
@@ -37,9 +41,20 @@ let history=[]
 // })
 
 
+// Action Creators
+function increment(){
+return {type: inc}
+}
+function decrement(){
+return {type:dec}
+}
+function incrementByAmount(value){
+return {type:incByAmount,payload:value}
+}
+
 setInterval(()=>{
 // event handle 
-store.dispatch({type:'incrementByAmount',payload:5})
+store.dispatch(decrement())
 },5000)
 
 
