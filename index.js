@@ -1,7 +1,9 @@
-import { createStore } from 'redux'
+import { createStore ,applyMiddleware} from 'redux'
+import logger from 'redux-logger'
 
+//logger is just use for log that give prev state, action and next state
 // store
-const store = createStore(reducer)
+const store = createStore(reducer,applyMiddleware(logger.default))
 
 //reducer funation
 function reducer(state={amount:1},action){
@@ -21,14 +23,17 @@ function reducer(state={amount:1},action){
 let history=[]
 
 // subscribe method runs after every state change or reducer change or after dispatch
-store.subscribe(()=>
-{
-    history.push(store.getState())
-    console.log(history)
-})
+// store.subscribe(()=>
+// {
+//     history.push(store.getState())
+//     console.log(history)
+// })
 
 
 setInterval(()=>{
 // event handle 
 store.dispatch({type:'increment'})
 },5000)
+
+
+// three principal 1) store should be golbal  (only 1 store) 2) immutable state 2) reducer funaction should be pure
