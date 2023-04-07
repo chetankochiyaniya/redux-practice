@@ -6,7 +6,7 @@ import logger from 'redux-logger'
 const store = createStore(reducer,applyMiddleware(logger.default))
 
 //reducer funation
-function reducer(state={amount:1},action){
+function reducer(state={amount:0},action){
     if(action.type==='increment'){
     
         // if you write like : 
@@ -16,6 +16,13 @@ function reducer(state={amount:1},action){
         //immutability
         // it will create copy of object , in here it like : [{amout:2}], next: [{amout:2},{amout:3}] it will not chage previous value it generate copy and than store
         return {amount: state.amount + 1}
+    }
+    if(action.type==='decrement'){
+        return {amount: state.amount - 1}
+    }
+    
+    if (action.type === 'incrementByAmount'){
+        return {amount: state.amount + action.payload}
     }
     return state
 }
@@ -32,7 +39,7 @@ let history=[]
 
 setInterval(()=>{
 // event handle 
-store.dispatch({type:'increment'})
+store.dispatch({type:'incrementByAmount',payload:5})
 },5000)
 
 
