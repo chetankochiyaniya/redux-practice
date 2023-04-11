@@ -1,0 +1,19 @@
+.user-list-pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination>.active>a, .pagination>.active>a:hover {
+  z-index: 3;
+  color: rgb(255, 255, 255);
+  cursor: default;
+  border: 1px solid rgb(128, 128, 128);
+  background-color: rgb(128, 128, 128);
+}
+.pagination>li>a, .pagination>li>span {
+  position: relative;
+  float: left;
+  color: rgba(0, 0, 0, 0.816);
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 221, 221);
+}

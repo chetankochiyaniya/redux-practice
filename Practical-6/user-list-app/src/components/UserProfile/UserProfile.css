@@ -1,0 +1,107 @@
+.user-profile-container {
+  margin-top: 20px;
+  margin-left: 25px;
+  background: rgb(245, 245, 245);
+  padding: 35px;
+  border: 1px;
+  box-shadow: 5px 5px 15px -7px;
+  border-radius: 25px;
+  width: 280px;
+  font-weight: 500;
+}
+.user-profile-avatar img {
+  border: 1px;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+}
+.user-profile-name {
+  padding: 5px 0;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.802);
+}
+.name-with-status-icon {
+  display: flex;
+  justify-content: center
+}
+.active-status-icon, .inactive-status-icon {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.inactive-status-icon {
+  background-color: rgba(0, 0, 0, 0.44);
+}
+.active-status-icon {
+  background-color: rgb(59, 138, 59);
+}
+.user-profile-email {
+  padding: 5px 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.419);
+}
+.user-plan {
+  padding: 5px 0;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.802);
+}
+.user-profile-status {
+  font-size: 18px;
+  color: white;
+  background-color: rgb(255, 165, 0);
+  padding: 8px;
+  border: 1px;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 40px;
+}
+.user-plan-usage {
+  text-align: left;
+  padding: 20px 0 5px;
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 15px;
+}
+.progressBar {
+  height: 5px;
+  width: 100%;
+  background-color: rgb(255, 220, 154);
+  border: 1px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.usage {
+  height: 5px;
+  background-color: rgb(255, 165, 0);
+  border: 1px;
+  border-radius: 5px;
+}
+.clicks {
+  display: flex;
+  justify-content: space-between;
+}
+.separator {
+  border-left:1px solid rgba(0, 0, 0, 0.179);
+}
+.click-reviewed-count, .monthly-click-count {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.809);
+}
+.click-reviewed-text, .monthly-click-text {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.446);
+}
+@media screen and (max-width: 576px) {
+  .user-profile-container {
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .user-profile-container {
+    margin-left: 0px;
+  }
+}

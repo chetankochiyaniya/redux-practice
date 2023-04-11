@@ -1,0 +1,80 @@
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 620px;
+}
+.user-sm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  width: max-content;
+}
+.user-sm-container {
+  flex-direction: column;
+  justify-content: center;
+}
+.user-info {
+  display: flex;
+  width: 250px;
+}
+.other-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 45px;
+}
+.user-avatar img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border: 1px;
+  border-radius: 50%;
+}
+.user-details {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.user-name {
+  color: rgba(0, 0, 0, 0.837);
+}
+.user-email {
+  color: rgba(0, 0, 0, 0.487);
+}
+.user-status select, .user-access select {
+  background-color: rgb(245, 245, 245);
+  border: none;
+  color: rgba(0, 0, 0, 0.433);
+  font-size: 15px;
+}
+.user-status, .user-access {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.433);
+  cursor: pointer;
+  width: 75px;
+}
+.user-status select, .user-access select{
+  border: 1px solid;
+  border-radius: 5px;
+} 
+.owner-status {
+  color: rgb(96, 162, 96);
+  width: 75px;
+  text-align: left;
+}
+.icon {
+  color: rgba(0, 0, 0, 0.487);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 20px;
+}
